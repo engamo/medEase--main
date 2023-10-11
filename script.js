@@ -8,12 +8,12 @@ function slideLeft(){
     cards.scrollLeft -= 300;
 }
 
-function right(){
+function rightf(){
     const cards = document.getElementById('features');
     cards.scrollLeft += 300;
 }
 
-function left(){
+function leftf(){
     const cards = document.getElementById('features');
     cards.scrollLeft -= 300;
 }
