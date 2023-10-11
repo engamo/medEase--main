@@ -79,156 +79,134 @@
   })();
   </script>
   <!--End of Tawk.to Script-->
-  <body>
-    <nav class="bg-[#0085ff] py-6 sticky top-0 z-50">
-      <div class="container mx-auto flex justify-between items-center">
-        <h1 class="font-bold text-white text-4xl">
-          Med<span class="text-red-500">Ease</span>
-        </h1>
-        <div class="flex justify-between gap-4 items-center">
-          <img src="assets/Nkem.png" alt="Nkem" class="rounded-full w-14 h-14" />
-          <p class="text-xl text-white">Nkemakolamuko</p>
-        </div>
-      </div>
-    </nav>
-
-    <div class="flex min-h-screen flex-row bg-gray-100 text-gray-800 ">
-      <aside
-        class="sidebar w-76 -translate-x-full transform bg-white px-4 pb-4 pt-0 transition-transform duration-150 ease-in md:translate-x-0 md:shadow-md "
-      >
-        <a
-          href="user-profile.html"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8 "
-        >
-          <span
-            ><ion-icon
-              name="person"
-              class="text-center text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              User Profile
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="#"
-          class="bg-[#0085ff] flex py-3 gap-8 items-center rounded-lg mt-8 pl-8 hover:bg-blue-500"
-        >
-          <span
-            ><ion-icon
-              name="create"
-              class="text-center text-white text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-white font-semibold">
-              Medication
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="refill-status.html"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
-          <span
-            ><ion-icon
-              name="add-circle"
-              class="text-center text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Refill Status
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="health1.html"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
-          <span
-            ><ion-icon
-              name="medkit"
-              class="text-center text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Health Insights
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="reminder.html"
-          class="flex  gap-8 items-center rounded-lg mt-8 pl-8"
-        >
-          <span
-            ><ion-icon
-              name="notifications"
-              class="text-center text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Reminders
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="adherence.html"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
-          <span
-            ><ion-icon name="time" class="text-center text-3xl"></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Adherence Status
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="emergency.html"
-          class="flex gap-8 items-center mt-8 pl-8"
-        >
-          <span
-            ><ion-icon
-              name="alert"
-              class="text-center text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Emergency Contact
-            </h3></span
-          ></a
-        >
-
-        <a
-          href="settings.html"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
-          <span
-            ><ion-icon
-              name="settings"
-              class="text-center text-3xl"
-            ></ion-icon
-          ></span>
-          <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Settings
-            </h3></span
-          ></a
-        >
-      </aside>
+      <body class="font-[inter] h-screen">
+        <nav class="bg-[#0085ff] py-6 sticky top-0 z-50">
+          <div class="container mx-auto flex justify-between items-center">
+            <h1 class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4">
+              <div class="hidden md:block"><span>Med</span><span class="text-red-500">Ease</span></div>
+              <span><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"></span>
+              <ion-icon name="menu" id="hamburger" class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4" onclick="toggleSidebar()"></ion-icon>
+            </h1>
+            <div class="flex justify-between items-center gap-8 mr-4">
+              <img
+                src="assets/Nkem.png"
+                alt="Nkem"
+                class="rounded-full w-14 h-14"
+              />
+              <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
+            </div>
+          </div>
+        </nav>
+    
+        <div class="main flex flex-row bg-gray-100 text-gray-800">
+          <aside id="sidebar"
+            class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
+          >
+            <a
+              href="user-profile.html"
+              class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8"
+            >
+              <span
+                ><ion-icon
+                  name="person"
+                  class="text-center text-2xl md:text-3xl text-[#0085ff]"
+                ></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  User Profile
+                </h3></span
+              ></a
+            >
+    
+            <a href="med2.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+              <span
+                ><ion-icon name="create" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  Medication
+                </h3></span
+              ></a
+            >
+    
+            <a href="refill-status.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+              <span
+                ><ion-icon name="add-circle" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  Refill Status
+                </h3></span
+              ></a
+            >
+    
+            <a href="health1.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+              <span
+                ><ion-icon name="medkit" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  Health Insights
+                </h3></span
+              ></a
+            >
+    
+            <a href="reminder.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+              <span
+                ><ion-icon
+                  name="notifications"
+                  class="text-center text-2xl md:text-3xl text-[#0085ff]"
+                ></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  Reminders
+                </h3></span
+              ></a
+            >
+    
+            <a href="adherence.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+              <span
+                ><ion-icon name="time" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  Adherence Status
+                </h3></span
+              ></a
+            >
+    
+            <a href="emergency.html" class="flex gap-8 items-start mt-5 pl-8">
+              <span
+                ><ion-icon name="alert" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+                  Emergency Contact
+                </h3></span
+              ></a
+            >
+    
+            <a href="settings.html" class="bg-[#0085ff] hover:bg-blue-500 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8">
+              <span
+                ><ion-icon name="settings" class="text-center text-2xl md:text-3xl text-white"></ion-icon
+              ></span>
+              <span
+                ><h3 class="text-lg md:text-xl text-white font-semibold">Settings</h3></span
+              ></a
+            >
+            <hr class="my-4 text-gray-600">
+            <a href="login.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+              <span>
+                <ion-icon name="log-out" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon>
+              </span>
+              <span
+                ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Logout</h3></span
+              ></a
+            >
+          </aside>
+    
 
       <main
         class="main -ml-48 flex flex-grow bg-gray-100 flex-col transition-all duration-150 ease-in md:ml-0 active relativity" id="medication"
@@ -318,95 +296,91 @@
     
 
     <script>
+                 // Step 1: Select the "Add" button element by its id
+                 const addButton = document.getElementById('add-button');
 
-            // Step 1: Select the "Add" button element by its id
-      const addButton = document.getElementById('add-button');
+const containerEl = document.querySelector(".relativity")
+containerEl.classList.remove("active")
 
-      const containerEl = document.querySelector(".relativity")
-      containerEl.classList.remove("active")
-      
-      // Step 2: Add a click event listener to the button
-      addButton.addEventListener('click', function() {
-        // Step 3: Retrieve the input value
-        const inputValue = document.getElementById('input-field').value;
-        const inputDosage = document.getElementById('input-dosage').value;
+// Step 2: Add a click event listener to the button
+addButton.addEventListener('click', function() {
+  // Step 3: Retrieve the input value
+  const inputValue = document.getElementById('input-field').value;
+  const inputDosage = document.getElementById('input-dosage').value;
 
-        // console.log(inputValue)
+  // console.log(inputValue)
 
-        // Check if the input value is not empty
-        if (inputValue.trim() && inputDosage !== '') {
-          // Create a new table row
-          const newRow = document.createElement('tr');
-          newRow.classList.add('border-b')
-          newRow.classList.add('bg-neutral-100')
-          newRow.classList.add('dark:border-neutral-500')
-          newRow.classList.add('dark:bg-neutral-700')
+  // Check if the input value is not empty
+  if (inputValue.trim() && inputDosage !== '') {
+    // Create a new table row
+    const newRow = document.createElement('tr');
+    newRow.classList.add('border-b')
+    newRow.classList.add('bg-neutral-100')
+    newRow.classList.add('dark:border-neutral-500')
+    newRow.classList.add('dark:bg-neutral-700')
 
-          // Create the <td> elements for the row
-          const cell1 = document.createElement('td');
-          cell1.textContent = '#'; // You can set the content for this cell as needed.
-          cell1.classList.add('py-6');
-          cell1.classList.add('font-semibold');
-          cell1.classList.add('whitespace-nowrap');
-          cell1.classList.add('px-6');
+    // Create the <td> elements for the row
+    const cell1 = document.createElement('td');
+    cell1.textContent = '#'; // You can set the content for this cell as needed.
+    cell1.classList.add('py-6');
+    cell1.classList.add('font-semibold');
+    cell1.classList.add('whitespace-nowrap');
+    cell1.classList.add('px-6');
 
-          const cell2 = document.createElement('td');
-          cell2.textContent = inputValue; // Set the input value as the content.
-          cell2.classList.add('py-6');
-          cell2.classList.add('font-semibold');
-          cell2.classList.add('whitespace-nowrap');
-          cell2.classList.add('px-6');
+    const cell2 = document.createElement('td');
+    cell2.textContent = inputValue; // Set the input value as the content.
+    cell2.classList.add('py-6');
+    cell2.classList.add('font-semibold');
+    cell2.classList.add('whitespace-nowrap');
+    cell2.classList.add('px-6');
 
-          const cell3 = document.createElement('td');
-          cell3.textContent = inputDosage; // You can set the content for this cell as needed.
-          cell3.classList.add('py-6');
-          cell3.classList.add('font-semibold');
-          cell3.classList.add('whitespace-nowrap');
-          cell3.classList.add('px-6');
+    const cell3 = document.createElement('td');
+    cell3.textContent = inputDosage; // You can set the content for this cell as needed.
+    cell3.classList.add('py-6');
+    cell3.classList.add('font-semibold');
+    cell3.classList.add('whitespace-nowrap');
+    cell3.classList.add('px-6');
 
-          const cell4 = document.createElement('td');
-          cell4.classList.add('pl-6');
-          
-          // Create the delete button (trash bin icon)
-          const deleteButton = document.createElement('button');
-          deleteButton.innerHTML = '<ion-icon name="trash" class="text-center text-[#EF4444] text-3xl cursor-pointer"></ion-icon>';
-          deleteButton.addEventListener('click', function() {
-            // Handle the delete functionality here.
-            // Remove the corresponding row from the table.
-            newRow.remove();
-          });
-          cell4.appendChild(deleteButton);
+    const cell4 = document.createElement('td');
+    cell4.classList.add('pl-6');
+    
+    // Create the delete button (trash bin icon)
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<ion-icon name="trash" class="text-center text-[#EF4444] text-3xl cursor-pointer"></ion-icon>';
+    deleteButton.addEventListener('click', function() {
+      // Handle the delete functionality here.
+      // Remove the corresponding row from the table.
+      newRow.remove();
+    });
+    cell4.appendChild(deleteButton);
 
-          // Append the <td> elements to the row
-          newRow.appendChild(cell1);
-          newRow.appendChild(cell2);
-          newRow.appendChild(cell3);
-          newRow.appendChild(cell4);
+    // Append the <td> elements to the row
+    newRow.appendChild(cell1);
+    newRow.appendChild(cell2);
+    newRow.appendChild(cell3);
+    newRow.appendChild(cell4);
 
-          // Step 4: Append the new row to the table's <tbody>
-          const tableData = document.getElementById('table-data');
-          tableData.appendChild(newRow);
+    // Step 4: Append the new row to the table's <tbody>
+    const tableData = document.getElementById('table-data');
+    tableData.appendChild(newRow);
 
-          // Clear the input field after adding the value
-          document.getElementById('input-field').value = '';
-          document.getElementById('input-dosage').value = '';
-        } else {
-            const popupContainerEl = document.querySelector(".popup-container")
-            const closeIconEl = document.querySelector(".close-icon")
-
-            
-                containerEl.classList.add("active")
-                popupContainerEl.classList.remove("active")
-
-            closeIconEl.addEventListener("click", () => {
-                containerEl.classList.remove("active")
-                popupContainerEl.classList.add("active")
-            })
-        }
-      });
-
+    // Clear the input field after adding the value
+    document.getElementById('input-field').value = '';
+    document.getElementById('input-dosage').value = '';
+  } else {
+      const popupContainerEl = document.querySelector(".popup-container")
+      const closeIconEl = document.querySelector(".close-icon")
 
       
+          containerEl.classList.add("active")
+          popupContainerEl.classList.remove("active")
+
+      closeIconEl.addEventListener("click", () => {
+          containerEl.classList.remove("active")
+          popupContainerEl.classList.add("active")
+      })
+  }
+});
     </script>
   </body>
 </html>
