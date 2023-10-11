@@ -7,160 +7,146 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Dashboard</title>
   </head>
-  <body>
-    <nav class="bg-[#0085ff] py-6">
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6526f42deb150b3fb9a08124/1hcg2jla1';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <body class="font-[inter] h-screen">
+    <nav class="bg-[#0085ff] py-6 z-10">
       <div class="container mx-auto flex justify-between items-center">
-        <h1 class="font-bold text-white text-4xl">
-          Med<span class="text-red-500">Ease</span>
+        <h1 class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4">
+          <div class="hidden md:block"><span>Med</span><span class="text-red-500">Ease</span></div>
+          <span><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"></span>
+          <ion-icon name="menu" id="hamburger" class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4" onclick="toggleSidebar()"></ion-icon>
         </h1>
-        <div class="flex justify-between gap-4 items-center">
-          <img src="assets/Grace.png" alt="Grace" class="rounded-full w-14 h-14" />
-          <p class="text-xl text-white">Grace Adie</p>
+        <div class="flex justify-between items-center gap-8 mr-4">
+          <img
+            src="assets/Nkem.png"
+            alt="Nkem"
+            class="rounded-full w-14 h-14"
+          />
+          <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
         </div>
       </div>
     </nav>
 
-    <div class="flex min-h-screen flex-row bg-gray-100 text-gray-800">
-      <aside
-        class="sidebar w-76 -translate-x-full transform bg-white p-4 transition-transform duration-150 ease-in md:translate-x-0 md:shadow-md"
+    <div class="main flex flex-row bg-gray-100 text-gray-800">
+      <aside id="sidebar"
+        class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
       >
         <a
-          href="#"
-          class="flex gap-8 items-center mt-8 pl-8"
+          href="user-profile.html"
+          class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8"
         >
           <span
             ><ion-icon
               name="person"
-              class="text-center text-3xl"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
             ></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
               User Profile
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
+        <a href="medication.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
           <span
-            ><ion-icon
-              name="create"
-              class="text-center text-3xl"
-            ></ion-icon
+            ><ion-icon name="create" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
               Medication
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
+        <a href="refill-status.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
           <span
-            ><ion-icon
-              name="add-circle"
-              class="text-center text-3xl"
-            ></ion-icon
+            ><ion-icon name="add-circle" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
               Refill Status
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
+        <a href="health1.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
           <span
-            ><ion-icon
-              name="medkit"
-              class="text-center text-3xl"
-            ></ion-icon
+            ><ion-icon name="medkit" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
               Health Insights
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center mt-8 pl-8 hover:bg-blue-500 bg-[#0085ff] rounded-lg py-3"
-        >
+        <a href="reminder.html" class="bg-[#0085ff] hover:bg-blue-500 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8">
           <span
             ><ion-icon
               name="notifications"
-              class="text-center text-white text-3xl"
+              class="text-center text-2xl md:text-3xl text-white"
             ></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-white font-semibold">
+            ><h3 class="text-lg md:text-xl text-white font-semibold">
               Reminders
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
+        <a href="adherence.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
           <span
-            ><ion-icon name="time" class="text-center text-3xl"></ion-icon
+            ><ion-icon name="time" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
               Adherence Status
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
+        <a href="emergency.html" class="flex gap-8 items-start mt-5 pl-8">
           <span
-            ><ion-icon
-              name="alert"
-              class="text-center text-3xl"
-            ></ion-icon
+            ><ion-icon name="alert" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
               Emergency Contact
             </h3></span
           ></a
         >
 
-        <a
-          href="#"
-          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
-        >
+        <a href="settings.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8 ">
           <span
-            ><ion-icon
-              name="settings"
-              class="text-center text-3xl"
-            ></ion-icon
+            ><ion-icon name="settings" class="text-center text-2xl md:text-3xl text-[#0085FF]"></ion-icon
           ></span>
           <span
-            ><h3 class="text-xl text-gray-800 font-semibold">
-              Settings
-            </h3></span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Settings</h3></span
           ></a
         >
-        
+        <hr class="my-4 text-gray-600">
+        <a href="login.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span>
+            <ion-icon name="log-out" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon>
+          </span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Logout</h3></span
+          ></a
+        >
       </aside>
-
-
-      
 
       <main
         class="main -ml-48 flex flex-grow flex-col transition-all duration-150 ease-in md:ml-0"
@@ -215,7 +201,7 @@
               </div>
               <br>
               <div class="w-[70%] flex justify-between items-center">
-                <button class="w-32 h-10 bg-blue-500 text-white font-bold rounded-md mx-auto">Done</button>
+                <a href="reminder2.html"><button class="w-32 h-10 bg-blue-500 text-white font-bold rounded-md mx-auto">Done</button></a>
               </div>
               
             </div>
