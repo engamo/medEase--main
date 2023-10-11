@@ -26,28 +26,34 @@
     </script>
     <!--End of Tawk.to Script-->
 <body class="h-full">
-    <nav class="flex justify-around items-center my-4 pb-4 border-b-2 max-[640px]:justify-between max-[640px]:w-[90%] max-[640px]:mx-auto">
-        <img src="./assets/logo.png" alt="logo" class="w-18 h-16">
-        <div class="flex justify-between items-center max-[640px]:hidden">
-            <a class="px-3 hover:text-black-300 text-2xl text-blue-600" href="#">Home</a>
-            <a class="px-3 hover:text-blue-600 text-2xl text-black-300" href="about.html">About</a>
-            <a class="px-3 hover:text-blue-600 text-2xl  text-black-300" href="contact.html">Contact</a>
-        </div>
-        <ion-icon name="menu" id="hamburger" class="text-blue-500 text-4xl hidden max-[640px]:block"></ion-icon>
-        <a href="login.html"><button type="submit" class="max-[640px]:hidden bg-blue-500 hover:bg-blue-900 inline-block text-white font-bold py-3 px-4 text-2xl rounded-lg shadow-lee">Login</button></a>
-    </nav>
-
-    <!-- mobileMenu -->
-    <div class="hidden md:hidden absolute w-full" id="mobileMenu">
-        <ul class="bg-white mt-2 text-center">
-            <li><a href="#" class="block py-2 px-4 hover:text-gray-200 text-xl cursor-pointer">Home</a></li>
-            <li><a href="about.html" class="block py-2 px-4 hover:bg-gray-200 text-xl cursor-pointer">About</a></li>
-            <li><a href="contact.html" class="block py-2 px-4 hover:bg-gray-200 text-xl cursor-pointer">Contact</a></li>
-            <li><a href="login.html" class="inline-block py-2 px-4 bg-blue-500 hover:bg-gray-200 text-white font-bold text-xl rounded-lg mb-4 cursor-pointer">Login</a></li>
-        </ul>
-    </div>
-
-    <!-- end -->
+    <header>
+        <nav class="bg-white">
+          <div class="container mx-auto py-4 px-4 flex justify-between items-center border-gray border-b-2 md:border-none">
+              <a href="https://med-ease.vercel.app/" class="text-white font-bold text-2xl">
+                  <img src="assets/logo.png" alt="Logo" class="w-16 h-16">
+              </a>
+              <div class="md:hidden">
+                  <button id="hamburger" class="focus:outline-none">
+                    <ion-icon name="menu" class="text-blue-600 text-4xl cursor-pointer"></ion-icon>
+                  </button>
+              </div>
+              <div class="hidden md:flex space-x-6">
+                  <a href="index.html" class="text-blue-600 hover:text-blue-900 text-2xl cursor-pointer">Home</a>
+                  <a href="#" class="text-black-300 hover:text-blue-600 text-2xl cursor-pointer">About</a>
+                  <a href="contact.html" class="text-black-300 hover:text-blue-600 text-2xl cursor-pointer">Contact</a>
+              </div>
+              <a href="login.html" class="md:inline-block hidden px-4 py-2 bg-blue-500 text-2xl hover:bg-blue-900 text-white font-bold rounded-lg shadow">Login</a>
+          </div>
+          <div class="hidden md:hidden" id="mobileMenu">
+              <ul class="bg-white mt-2 text-center">
+                  <li><a href="index.html" class="block py-2 px-4 text-blue-600 hover:text-blue-900 text-xl cursor-pointer">Home</a></li>
+                  <li><a href="#" class="block py-2 px-4 text-black-300 hover:text-blue-600 text-xl cursor-pointer">About</a></li>
+                  <li><a href="contact.html" class="block py-2 px-4 text-black-300 hover:text-blue-600 text-xl cursor-pointer">Contact</a></li>
+                  <li><a href="login.html" class="inline-block py-2 px-4 bg-blue-500 hover:bg-blue-900 text-white font-bold text-xl rounded-lg mb-4 cursor-pointer">Login</a></li>
+              </ul>
+          </div>
+      </nav>
+      </header>
 
     <section class="flex max-[640px]:flex-col-reverse max-[640px]:pb-10 justify-between items-center w-[95%] mx-auto h-full">
         <div class="w-[45%] max-[640px]:w-full max-[640px]:text-center max-[640px]:items-center flex flex-col items-start ml-5">
