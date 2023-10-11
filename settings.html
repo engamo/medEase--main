@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/098c2dda99.js" crossorigin="anonymous"></script>
+    <title>Settings</title>
+  </head>
+  <body class="font-[inter] h-screen">
+    <nav class="bg-[#0085ff] py-6 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4">
+          <div class="hidden md:block"><span>Med</span><span class="text-red-500">Ease</span></div>
+          <span><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"></span>
+          <ion-icon name="menu" id="hamburger" class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4" onclick="toggleSidebar()"></ion-icon>
+        </h1>
+        <div class="flex justify-between items-center gap-8 mr-4">
+          <img
+            src="assets/Nkem.png"
+            alt="Nkem"
+            class="rounded-full w-14 h-14"
+          />
+          <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main flex flex-row bg-gray-100 text-gray-800">
+      <aside id="sidebar"
+        class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
+      >
+        <a
+          href="user-profile.html"
+          class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a href="medication.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="create" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a href="refill-status.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="add-circle" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a href="health1.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="medkit" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a href="reminder2.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a href="adherence.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="time" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a href="emergency.html" class="flex gap-8 items-start mt-5 pl-8">
+          <span
+            ><ion-icon name="alert" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a href="settings.html" class="bg-[#0085ff] hover:bg-blue-500 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="settings" class="text-center text-2xl md:text-3xl text-white"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-white font-semibold">Settings</h3></span
+          ></a
+        >
+        <hr class="my-4 text-gray-600">
+        <a href="login.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span>
+            <ion-icon name="log-out" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon>
+          </span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Logout</h3></span
+          ></a
+        >
+      </aside>
+
+      <main class="main bg-gray-100">
+        <div class="grid grid-col-1 md:grid-cols-2 gap-4 p-12 items-start justify-center">
+          <div class="pl-14">
+            <div class="pb-4">
+              <h2 class="text-gray-600 text-2xl font-bold pb-2 tracking-wide">Account Settings</h2>
+              <ul class="list-none">
+                <li><a href="#" class="ml-8 tracking-wide">Change Password</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Privacy and security settings</a></li>
+              </ul>
+            </div>
+
+            <div class="pb-4">
+              <h2 class="text-gray-600 text-2xl font-bold pb-2 tracking-wide">Notifications</h2>
+              <ul class="list-none">
+                <li><a href="#" class="ml-8 tracking-wide">Medication Reminders</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">App updates and news</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Notification preferences</a></li>
+              </ul>
+            </div>
+
+            <div class="pb-4">
+              <h2 class="text-gray-600 text-2xl font-bold pb-2 tracking-wide">Medication Preference</h2>
+              <ul class="list-none">
+                <li><a href="#" class="ml-8 tracking-wide">Dosage units (e.g., mg, ml)</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Medication display preferences</a></li>
+              </ul>
+            </div>
+
+            <div class="pb-4">
+              <h2 class="text-gray-600 text-2xl font-bold pb-2 tracking-wide">Health Information</h2>
+              <ul class="list-none">
+                <li><a href="#" class="ml-8 tracking-wide">Allergies and sensitivities</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Medical conditions</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Emergency contacts</a></li>
+              </ul>
+            </div>
+
+            <div class="pb-4">
+              <h2 class="text-gray-600 text-2xl font-bold pb-2 tracking-wide">Custom Reminders</h2>
+              <ul class="list-none">
+                <li><a href="#" class="ml-8 tracking-wide">Customize medication reminder</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Snooze and delay options</a></li>
+                <li><a href="#" class="ml-8 tracking-wide">Reminder sounds and vibrations</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="main pl-14">
+            <div class="pb-12">
+              <h2 class="text-gray-600 text-2xl font-bold tracking-wide">Primary Settings</h2>
+              <div class="bg-[#0085ff] flex py-3 w-60 items-center rounded-lg mt-4">
+                <span class="px-6">
+                  <svg width="50" height="30" viewBox="0 0 90 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M58.5 0H31.5C23.1457 9.88008e-08 15.1335 2.63392 9.22614 7.32233C3.31874 12.0107 0 18.3696 0 25C0 31.6304 3.31874 37.9893 9.22614 42.6777C15.1335 47.3661 23.1457 50 31.5 50H58.5C66.8543 50 74.8665 47.3661 80.7739 42.6777C86.6813 37.9893 90 31.6304 90 25C90 18.3696 86.6813 12.0107 80.7739 7.32233C74.8665 2.63392 66.8543 9.88008e-08 58.5 0ZM58.5 35.7143C55.83 35.7143 53.2199 35.0859 50.9998 33.9086C48.7797 32.7313 47.0494 31.058 46.0276 29.1002C45.0058 27.1424 44.7385 24.9881 45.2594 22.9097C45.7803 20.8314 47.066 18.9223 48.9541 17.4239C50.8421 15.9254 53.2475 14.905 55.8663 14.4916C58.485 14.0782 61.1994 14.2904 63.6662 15.1013C66.133 15.9122 68.2414 17.2855 69.7248 19.0475C71.2082 20.8094 72 22.8809 72 25C72 27.8416 70.5777 30.5668 68.0459 32.5761C65.5142 34.5855 62.0804 35.7143 58.5 35.7143Z" fill="white"/>
+                  </svg>
+                </span>
+                <h3 class="text-xl text-white text-gray-800 font-semibold">Dark Mode</h3>
+              </div>
+            </div>
+
+            <h2 class="text-gray-600 text-2xl font-bold tracking-wide">Secondary Settings</h2>
+            <div class="bg-white flex flex-col gap-4 py-3 w-60 items-center rounded-lg mt-4 h-28">
+              <p class="text-gray-900 text-xl tracking-normal">Backup and Restore</p>
+              <div class="flex items-center justify-center">
+                <span class="pr-3">
+                  <svg width="50" height="25" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.5 0H17.5C12.8587 5.92805e-08 8.40752 1.58035 5.12563 4.3934C1.84374 7.20644 0 11.0218 0 15C0 18.9782 1.84374 22.7936 5.12563 25.6066C8.40752 28.4196 12.8587 30 17.5 30H32.5C37.1413 30 41.5925 28.4196 44.8744 25.6066C48.1563 22.7936 50 18.9782 50 15C50 11.0218 48.1563 7.20644 44.8744 4.3934C41.5925 1.58035 37.1413 5.92805e-08 32.5 0ZM32.5 21.4286C31.0166 21.4286 29.5666 21.0515 28.3332 20.3452C27.0999 19.6388 26.1386 18.6348 25.5709 17.4601C25.0032 16.2854 24.8547 14.9929 25.1441 13.7458C25.4335 12.4988 26.1478 11.3534 27.1967 10.4543C28.2456 9.55526 29.582 8.943 31.0368 8.69495C32.4917 8.4469 33.9997 8.57421 35.3701 9.06077C36.7406 9.54734 37.9119 10.3713 38.736 11.4285C39.5601 12.4856 40 13.7285 40 15C40 16.705 39.2098 18.3401 37.8033 19.5457C36.3968 20.7513 34.4891 21.4286 32.5 21.4286Z" fill="black"/>
+                  </svg>
+                </span>
+                <p class="text-xl text-black font-semibold">Enable</p>
+              </div>
+            </div>
+            <button type="submit" class="mt-14 bg-blue-500 hover:bg-blue-900 inline-block text-white font-semibold py-3 w-60 text-xl rounded-lg shadow-lee">Save Changes</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

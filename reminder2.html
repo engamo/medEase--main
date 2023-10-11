@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/098c2dda99.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Reminder</title>
+  </head>
+  <body class="font-[inter] h-screen">
+    <nav class="bg-[#0085ff] py-6 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4">
+          <div class="hidden md:block"><span>Med</span><span class="text-red-500">Ease</span></div>
+          <span><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"></span>
+          <ion-icon name="menu" id="hamburger" class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4" onclick="toggleSidebar()"></ion-icon>
+        </h1>
+        <div class="flex justify-between items-center gap-8 mr-4">
+          <img
+            src="assets/Nkem.png"
+            alt="Nkem"
+            class="rounded-full w-14 h-14"
+          />
+          <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main flex flex-row bg-gray-100 text-gray-800">
+      <aside
+        id="sidebar"
+        class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
+      >
+        <a
+          href="#"
+          class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a href="medication.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="create" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a href="refill-status.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="add-circle"class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a href="health1.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="medkit" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a href="#" class=" bg-[#0085ff] hover-bg-blue-500 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-2xl md:text-3xl text-white""
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-white font-semibold" >
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a href="adherence.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="time" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a href="emergency.html" class="flex gap-8 items-start mt-5 pl-8">
+          <span
+            ><ion-icon name="alert" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a href="settings.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="settings" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Settings</h3></span
+          ></a
+        >
+        <hr class="my-4 text-gray-600">
+        <a href="login.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span>
+            <ion-icon name="log-out" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon>
+          </span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Logout</h3></span
+          ></a
+        >
+      </aside>
+
+      
+      <main
+        class="main md:-ml-48 flex flex-grow flex-col transition-all duration-150 ease-in md:ml-0"
+      >
+        <div class="flex justify-center items-center h-full bg-[#F4F4F4] shadow-md">
+          <div class="h-[90%] w-[90%]">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <h1 class="text-2xl text-left font-bold md:text-3xl mb-5">Treatment Progress</h1>
+              <p class="text-right md:text-3xl mb-5">70%</p>
+            </div>
+        
+            <div class="w-full h-10 bg-gradient-to-r from-blue-500 via-blue-500 to-red-500 ">
+               
+            </div>
+      
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+              <div class="col-span-1 p-4 flex justify-center items-center">This week</div>
+              <div class="col-span-1 p-4 flex justify-center items-center">This month</div>
+              <div class="col-span-1 p-4 flex justify-center items-center">This year</div>
+            </div>
+      
+            <div class="grid grid-cols-7 gap-4 mb-5">
+              <div class="col-span-1 p-4 flex items-center justify-center">Mon</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">Tue</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">Wed</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">Thu</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">Fri</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">Sat</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">Sun</div>
+            </div>
+      
+            <div class="grid grid-cols-7 gap-4 mb-5">
+              <div class="col-span-1 p-4 flex items-center justify-center">6</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">7</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">
+                <div class="w-10 h-10 bg-[#0085ff] rounded-full flex items-center justify-center text-white">
+                  8
+                </div>
+              </div>
+              <div class="col-span-1 p-4 flex items-center justify-center">9</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">10</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">11</div>
+              <div class="col-span-1 p-4 flex items-center justify-center">12</div>
+            </div>
+
+            <div>
+                <h1 class=" flex justify-center items-center text-2xl text-left font-bold md:text-3xl mb-5">Wednesday, August 8</h1>
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class=" text-left mb-5 flex items-center gap-4">
+                        <span class="material-symbols-outlined text-4xl font-bold">pill</span>
+                        <div>
+                            <span class="text-2xl top-0">Priobiotics</span>
+                            <p>2 pills, once per day</p>
+                        </div>
+                      </div>
+                      
+                    <span class="material-symbols-outlined text-4xl font-bold">
+                        check_box
+                        </span>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class=" text-left mb-5 flex items-center gap-4">
+                        <span class="material-symbols-outlined text-4xl font-bold">pill</span>
+                        <div>
+                            <span class="text-2xl top-0">Asprin</span>
+                            <p>1 pill, twice per day</p>
+                        </div>
+                      </div>
+                      
+                    <span class="material-symbols-outlined text-4xl font-bold">
+                        check_box_outline_blank
+                        </span>
+                </div>
+            </div>
+              
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.getElementById("hamburger");
+      const sideBar = document.getElementById("sidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+      function toggleSidebar() {
+        sideBar.classList.toggle('-translate-x-full');
+        sidebarOverlay.classList.toggle('hidden');
+      }
+
+      // Close the sidebar when clicking outside of it or the main content
+      document.addEventListener('click', (event) => {
+        if (!sideBar.contains(event.target) && event.target !== menuToggle) {
+          sideBar.classList.add('-translate-x-full');
+          sidebarOverlay.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

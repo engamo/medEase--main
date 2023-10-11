@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/098c2dda99.js" crossorigin="anonymous"></script>
+    <title>Refill Status</title>
+  </head>
+  <body class="font-[inter] h-screen">
+    <nav class="bg-[#0085ff] py-6 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4">
+          <div class="hidden md:block"><span>Med</span><span class="text-red-500">Ease</span></div>
+          <span><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"></span>
+          <ion-icon name="menu" id="hamburger" class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4" onclick="toggleSidebar()"></ion-icon>
+        </h1>
+        <div class="flex justify-between items-center gap-8 mr-4">
+          <img
+            src="assets/Nkem.png"
+            alt="Nkem"
+            class="rounded-full w-14 h-14"
+          />
+          <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main flex flex-row bg-gray-100 text-gray-800">
+      <aside id="sidebar"
+        class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
+      >
+        <a
+          href="#"
+          class="bg-[#0085ff] hover:bg-blue-900 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-2xl md:text-3xl text-white"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-white font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a href="medication.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="create" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a href="refill-status.html" class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8">
+          <span
+            ><ion-icon name="add-circle" class="text-center text-2xl md:text-3xl text-[#0085FF]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a href="health1.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="medkit" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a href="reminder2.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a href="adherence.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="time" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a href="emergency.html" class="flex gap-8 items-start mt-5 pl-8">
+          <span
+            ><ion-icon name="alert" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a href="settings.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="settings" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Settings</h3></span
+          ></a
+        >
+        <hr class="my-4 text-gray-600">
+        <a href="login.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span>
+            <ion-icon name="log-out" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon>
+          </span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Logout</h3></span
+          ></a
+        >
+      </aside>
+
+      <main id="main-content" class="mx-auto my-auto p-4">
+        <div class="flex flex-col md:flex-row gap-8 justify-between items-center">
+
+          <div class="bg-white rounded-[24px] max-w-md h-auto p-4 mt-8 mb-8">
+            <div class="bg-white rounded-[24px] w-full h-auto"><img src="assets/Rectangle 1064.png" alt="user-image"></div>
+            
+            <h2 class="font-bold text-2xl md:text-3xl mt-2">About Me</h2>
+            <p class="w-full">I'm  Vanila Buba, a busy entrepreneur and an asthma patient.</p>
+            <h2 class="font-bold text-2xl md:text-3xl mt-2">Personal Information</h2>
+            <div><span class="font-bold text-lg md:text-xl mr-2">Name:</span><span>Vanila Blue/span></div>
+            <div><span class="font-bold text-lg md:text-xl mr-2">Age:</span><span>45yrs old</span></div>
+            <div><span class="font-bold text-lg md:text-xl mr-2">Gender:</span><span>Female</span></div>
+            <div><span class="font-bold text-lg md:text-xl mr-2">Address:</span><span>#9, Agege Street, Lagos</span></div>
+            <div class="text-center mt-4 mb-2"><a href="#"><button class="bg-[#0085ff] hover:bg-blue-900 px-4 py-2 rounded-lg text-white">Edit profile</button></a></div>
+          </div>
+
+       
+          <div class="flex flex-col gap-16">
+            <div class="bg-white max-w-sm p-8 rounded-[24px] flex flex-col gap-8">
+              <div class="flex justify-between items-center gap-8">
+                <h2 class="text-2xl md:text-3xl font-medium">Allergies</h2>
+                <div class="text-center mt-4 mb-2"><a href="#"><button class="bg-[#0085ff] hover:bg-blue-900 px-4 py-2 rounded-lg text-white">View</button></a></div>
+              </div>
+              <div class="flex justify-between items-center gap-8">
+                <h2 class="text-2xl md:text-3xl font-medium">Medical History</h2>
+                <div class="text-center mt-4 mb-2"><a href="#"><button class="bg-[#0085ff] hover:bg-blue-900 px-4 py-2 rounded-lg text-white">View</button></a></div>
+              </div>
+            </div>
+            
+            <div class="bg-white max-w-sm p-8 rounded-[24px] flex flex-col gap-4 md:mb-0 mb-4">
+              <h2 class="text-2xl md:text-3xl font-medium">Contact Information</h2>
+              <div class="flex justify-between items-center gap-8">
+                <h2>Wife</h2>
+                <p>08125484430</p>
+              </div>
+              <div class="flex justify-between items-center gap-8">
+                <h2>Nurse</h2>
+                <p>07013425610</p>
+              </div>
+              <div class="flex justify-between items-center gap-8">
+                <h2>Owen</h2>
+                <p>08039447451</p>
+              </div>
+            </div>
+          
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    <title>Add Medication</title>
+    <link rel="shortcut icon" href="../Landing-Page/assets/logo.png" type="image/x-icon">
+
+    <style>
+        .popup-container {
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            top: 35%;
+            left: 50%;
+            width: 500px;
+            height: 200px;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
+            opacity: 1;
+        }
+
+        h4 {
+            font-size: 30px;
+            font-family: sans-serif;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .close-icon {
+            font-size: 50px;
+            position: absolute;
+            
+            right: 50%;
+            top: 50%;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: orangered;
+        }
+
+        .close-icon:hover {
+            filter: brightness(0.8);
+        }
+
+        .active.popup-container {
+            visibility: hidden;
+            opacity: 0; 
+            top: 10%;
+        }
+
+        .relativity {
+            position: relative;
+        }
+
+        .active.relativity {
+            filter: blur(5px) brightness(.7);
+        }
+
+    </style>
+  </head>
+  <body>
+    <nav class="bg-[#0085ff] py-6 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-white text-4xl">
+          Med<span class="text-red-500">Ease</span>
+        </h1>
+        <div class="flex justify-between gap-4 items-center">
+          <img src="assets/Nkem.png" alt="Nkem" class="rounded-full w-14 h-14" />
+          <p class="text-xl text-white">Nkemakolamuko</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex min-h-screen flex-row bg-gray-100 text-gray-800 ">
+      <aside
+        class="sidebar w-76 -translate-x-full transform bg-white px-4 pb-4 pt-0 transition-transform duration-150 ease-in md:translate-x-0 md:shadow-md "
+      >
+        <a
+          href="user-profile.html"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8 "
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="bg-[#0085ff] flex py-3 gap-8 items-center rounded-lg mt-8 pl-8 hover:bg-blue-500"
+        >
+          <span
+            ><ion-icon
+              name="create"
+              class="text-center text-white text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-white font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="refill-status.html"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="add-circle"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="health1.html"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="medkit"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="reminder2.html"
+          class="flex  gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="adherence.html"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon name="time" class="text-center text-3xl"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="emergency.html"
+          class="flex gap-8 items-center mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="alert"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="settings.html"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="settings"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Settings
+            </h3></span
+          ></a
+        >
+      </aside>
+
+      <main
+        class="main -ml-48 flex flex-grow bg-gray-100 flex-col transition-all duration-150 ease-in md:ml-0 active relativity" id="medication"
+      >
+        <div
+          class="flex h-full mt-16 justify-center text-2xl font-medium shadow-md"
+        >
+          <div>
+            <div class="flex flex-row gap-20">
+              <input id="input-field"
+                type="text"
+                class="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.8rem] leading-[1.6] outline-double transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-100 focus:ring-2 focus:ring-blue-500"
+                id="exampleInput125"
+                placeholder="Medication Name"
+              />
+              <input id="input-dosage"
+                type="text"
+                class="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.8rem] leading-[1.6] outline-double transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-100 focus:ring-2 focus:ring-blue-500"
+                id="exampleInput125"
+                placeholder="Dosage"
+              />
+            </div>
+            <div>
+              <div class="mt-14">
+                <div
+                  class="block max-w-4xl rounded-lg bg-white py-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-screen"
+                >
+                  <span class="text-1xl font-medium p-6"
+                    >Medication Schedule</span
+                  >
+                  <br />
+                  <br />
+                  <hr />
+
+                  <div class="flex flex-col ">
+                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                          <table class="min-w-full text-left font-light text-xl ">
+                            <thead
+                              class="border-b bg-white font-medium dark:border-neutral-500 dark:bg-neutral-600">
+                              <tr>
+                                <th scope="col" class="px-6 py-4">#</th>
+                                <th scope="col" class="px-6 py-4">Medication</th>
+                                <th scope="col" class="px-6 py-4">Dosage</th>
+                                <th scope="col" class="px-6 py-4">Remove</th>
+                              </tr>
+                            </thead>
+                            <tbody id="table-data">
+                              <!-- <tr 
+                                class="border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700" id="item-one">
+                                <td class="whitespace-nowrap px-6 py-4 font-semibold">#</td>
+                                <td class="whitespace-nowrap px-6 py-4 font-semibold">Ibuprofen</td>
+                                <td class="whitespace-nowrap px-6 py-4 font-semibold">1 x 2</td>
+                                <td class="whitespace-nowrap px-6 py-4"> <span
+                                   ><ion-icon name="trash" class="text-center text-[#0085ff] text-3xl cursor-pointer"></ion-icon></span> </td>
+                              </tr> -->
+                            </tbody>
+                          </table>
+
+                          <div class="flex text-center justify-center items-center mt-6">
+                            <button type="button" class="bg-blue-500 hover:bg-blue-900 inline-block text-white font-bold py-2 px-6 text-xl rounded-md shadow-lee" id="add-button">Add</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+      </main>
+      <!-- For Pop-Up -->
+        <div class="popup-container active">
+            <h4>Please Fill Out Both Medication Fields</h4>
+                <span class="close-icon">X</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+
+    
+
+    <script>
+
+            // Step 1: Select the "Add" button element by its id
+      const addButton = document.getElementById('add-button');
+
+      const containerEl = document.querySelector(".relativity")
+      containerEl.classList.remove("active")
+      
+      // Step 2: Add a click event listener to the button
+      addButton.addEventListener('click', function() {
+        // Step 3: Retrieve the input value
+        const inputValue = document.getElementById('input-field').value;
+        const inputDosage = document.getElementById('input-dosage').value;
+
+        // console.log(inputValue)
+
+        // Check if the input value is not empty
+        if (inputValue.trim() && inputDosage !== '') {
+          // Create a new table row
+          const newRow = document.createElement('tr');
+          newRow.classList.add('border-b')
+          newRow.classList.add('bg-neutral-100')
+          newRow.classList.add('dark:border-neutral-500')
+          newRow.classList.add('dark:bg-neutral-700')
+
+          // Create the <td> elements for the row
+          const cell1 = document.createElement('td');
+          cell1.textContent = '#'; // You can set the content for this cell as needed.
+          cell1.classList.add('py-6');
+          cell1.classList.add('font-semibold');
+          cell1.classList.add('whitespace-nowrap');
+          cell1.classList.add('px-6');
+
+          const cell2 = document.createElement('td');
+          cell2.textContent = inputValue; // Set the input value as the content.
+          cell2.classList.add('py-6');
+          cell2.classList.add('font-semibold');
+          cell2.classList.add('whitespace-nowrap');
+          cell2.classList.add('px-6');
+
+          const cell3 = document.createElement('td');
+          cell3.textContent = inputDosage; // You can set the content for this cell as needed.
+          cell3.classList.add('py-6');
+          cell3.classList.add('font-semibold');
+          cell3.classList.add('whitespace-nowrap');
+          cell3.classList.add('px-6');
+
+          const cell4 = document.createElement('td');
+          cell4.classList.add('pl-6');
+          
+          // Create the delete button (trash bin icon)
+          const deleteButton = document.createElement('button');
+          deleteButton.innerHTML = '<ion-icon name="trash" class="text-center text-[#EF4444] text-3xl cursor-pointer"></ion-icon>';
+          deleteButton.addEventListener('click', function() {
+            // Handle the delete functionality here.
+            // Remove the corresponding row from the table.
+            newRow.remove();
+          });
+          cell4.appendChild(deleteButton);
+
+          // Append the <td> elements to the row
+          newRow.appendChild(cell1);
+          newRow.appendChild(cell2);
+          newRow.appendChild(cell3);
+          newRow.appendChild(cell4);
+
+          // Step 4: Append the new row to the table's <tbody>
+          const tableData = document.getElementById('table-data');
+          tableData.appendChild(newRow);
+
+          // Clear the input field after adding the value
+          document.getElementById('input-field').value = '';
+          document.getElementById('input-dosage').value = '';
+        } else {
+            const popupContainerEl = document.querySelector(".popup-container")
+            const closeIconEl = document.querySelector(".close-icon")
+
+            
+                containerEl.classList.add("active")
+                popupContainerEl.classList.remove("active")
+
+            closeIconEl.addEventListener("click", () => {
+                containerEl.classList.remove("active")
+                popupContainerEl.classList.add("active")
+            })
+        }
+      });
+
+
+      
+    </script>
+  </body>
+</html>

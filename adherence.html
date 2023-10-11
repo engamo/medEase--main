@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js"></script>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Adherence</title>
+    <style>
+      /* Calendar styles */
+        .calendar {
+            max-width: 320px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0085ff;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        .calendar-month {
+            text-transform: uppercase;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .calendar-table th, .calendar-table td {
+            text-align: center;
+            padding: 12px;
+        }
+
+        .calendar-table th {
+            background-color: #0085ff;
+            color: white;
+        }
+
+        .calendar-table td {
+            cursor: pointer;
+        }
+
+        /* Style for checked (blue) dates */
+        .calendar-day.checked {
+            background-color: #0085ff;
+            color: white;
+            border-radius: 50%;
+        }
+
+        /* Style for unchecked (white) dates */
+        .calendar-day.unchecked {
+            background-color: white;
+            color: #333;
+        }
+    </style>
+  </head>
+  <body class="font-[inter] h-screen">
+    <nav class="bg-[#0085ff] py-6 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4">
+          <div class="hidden md:block"><span>Med</span><span class="text-red-500">Ease</span></div>
+          <span><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"></span>
+          <ion-icon name="menu" id="hamburger" class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4" onclick="toggleSidebar()"></ion-icon>
+        </h1>
+        <div class="flex justify-between items-center gap-8 mr-4">
+          <img
+            src="assets/Nkem.png"
+            alt="Nkem"
+            class="rounded-full w-14 h-14"
+          />
+          <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main flex flex-row bg-gray-100 text-gray-800">
+      <aside id="sidebar"
+        class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
+      >
+        <a
+          href="user-profile.html"
+          class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a href="medication.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="create" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a href="refill-status.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="add-circle" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a href="health1.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="medkit" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a href="reminder2.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a href="adherence.html" class="bg-[#0085ff] hover:bg-blue-900 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="time" class="text-center text-2xl md:text-3xl text-white"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-white font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a href="emergency.html" class="flex gap-8 items-start mt-5 pl-8">
+          <span
+            ><ion-icon name="alert" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a href="settings.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon name="settings" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Settings</h3></span
+          ></a
+        >
+        <hr class="my-4 text-gray-600">
+        <a href="login.html" class="flex gap-8 items-start rounded-lg mt-5 pl-8">
+          <span>
+            <ion-icon name="log-out" class="text-center text-2xl md:text-3xl text-[#0085ff]"></ion-icon>
+          </span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">Logout</h3></span
+          ></a
+        >
+      </aside>
+
+      <main
+        class="main w-screen h-screen mt-16 flex justify-center items-center transition-all duration-150 ease-in md:ml-0"
+      >
+        <div class="flex flex-col gap-8 h-full items-center justify-start bg-[#F4F4F4] w-full p-2">
+         <div class="grid grid-cols-1 gap-4 md:grid grid-cols-1 gap-2">
+            <div class="calendar container bg-white">
+                <div class="calendar-header">
+                    <button id="prevMonthBtn">←</button>
+                    <div class="calendar-month" id="currentMonthYear"></div>
+                    <button id="nextMonthBtn">→</button>
+                </div>
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarDays">
+                    </tbody>
+                </table>
+            </div>
+           <div style="max-width: 400px; margin: 0 auto;" class="container bg-white">
+              <canvas id="myPieChart"></canvas>
+          </div>
+          </div>
+          <div style="max-width: 600px; margin: 0 auto;" class="container bg-white">
+              <canvas id="myBarChart"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

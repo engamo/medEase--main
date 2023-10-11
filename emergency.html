@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Emergency Contacts</title>
+  </head>
+
+  <body class="font-[inter] h-screen">
+    <nav class="bg-[#0085ff] py-6 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1
+          class="font-bold text-white text-4xl flex gap-4 items-center justify-center ml-4"
+        >
+          <div class="hidden md:block">
+            <span>Med</span><span class="text-red-500">Ease</span>
+          </div>
+          <span
+            ><img src="assets/logo.png" alt="" class="w-8 h-8 hidden md:block"
+          /></span>
+          <ion-icon
+            name="menu"
+            id="hamburger"
+            class="cursor-pointer block md:hidden absolute w-14 h-14 top-6 left-4"
+            onclick="toggleSidebar()"
+          ></ion-icon>
+        </h1>
+        <div class="flex justify-between items-center gap-8 mr-4">
+          <img
+            src="assets/Nkem.png"
+            alt="Nkem"
+            class="rounded-full w-14 h-14"
+          />
+          <p class="text-xl text-white md:block hidden">Nkemakolamuko</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main flex flex-row bg-gray-100 text-gray-800">
+      <aside
+        id="sidebar"
+        class="sidebar absolute md:static top-22 left-0 w-fit bg-white pl-4 pr-8 transition-transform duration-150 ease-in -translate-x-full md:translate-x-0 md:shadow-md"
+      >
+        <a
+          href="user-profile.html"
+          class="flex py-3 gap-8 items-start rounded-lg mt-3 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="medication.html"
+          class="flex gap-8 items-start rounded-lg mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="create"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="refill-status.html"
+          class="flex gap-8 items-start rounded-lg mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="add-circle"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="health1.html"
+          class="flex gap-8 items-start rounded-lg mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="medkit"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="reminder2.html"
+          class="flex gap-8 items-start rounded-lg mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="adherence.html"
+          class="flex gap-8 items-start rounded-lg mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="time"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a href="emergency.html" class="bg-[#0085ff] hover:bg-blue-500 flex py-3 gap-8 items-center rounded-lg mt-5 pl-8">
+          <span
+            ><ion-icon
+              name="alert"
+              class="text-center text-2xl md:text-3xl text-white"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-white font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="settings.html"
+          class="flex gap-8 items-start mt-5 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="settings"
+              class="text-center text-2xl md:text-3xl text-[#0085FF]"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Settings
+            </h3></span
+          ></a
+        >
+        <hr class="my-4 text-gray-600" />
+        <a
+          href="login.html"
+          class="flex gap-8 items-start rounded-lg mt-5 pl-8"
+        >
+          <span>
+            <ion-icon
+              name="log-out"
+              class="text-center text-2xl md:text-3xl text-[#0085ff]"
+            ></ion-icon>
+          </span>
+          <span
+            ><h3 class="text-lg md:text-xl text-gray-800 font-semibold">
+              Logout
+            </h3></span
+          ></a
+        >
+      </aside>
+
+      <main
+        class="main flex flex-grow flex-col transition-all duration-150 ease-in md:ml-0"
+      >
+        <div
+          class="flex justify-center items-center h-full bg-[#F4F4F4] shadow-md"
+        >
+          <div class="h-full w-full overflow-y-hidden">
+            <h1 class="mb-5 text-5xl font-bold pl-8">Emergency Contacts</h1>
+            <div class="grid gap-y-10 grid-cols-2 pl-8">
+              <div
+                class="rounded-lg drop-shadow-2xl w-[90%] h-[200px] bg-white text-2xl flex items-center justify-center"
+              >
+                <img
+                  src="/assets/Aisosa.png"
+                  alt=""
+                  class="w-[25%] h-[80%] object-cover rounded-lg mr-4"
+                />
+                <div>
+                  <p class="">Name: <span>Margaret Aisosa</span></p>
+                  <p>Relationship: <span>Aunt</span></p>
+                  <p>Phone No: <span>08038640732</span></p>
+                </div>
+              </div>
+              <div
+                class="rounded-lg drop-shadow-2xl w-[90%] h-[200px] bg-white text-2xl flex items-center justify-center"
+              >
+                <img
+                  src="/assets/Mustapha.png"
+                  alt=""
+                  class="w-[25%] h-[80%] object-cover rounded-lg mr-4"
+                />
+                <div>
+                  <p class="">Name: <span>Mustaphar Anthonio</span></p>
+                  <p>Relationship: <span>Friend</span></p>
+                  <p>Phone No: <span>07067812926</span></p>
+                </div>
+              </div>
+              <div
+                class="rounded-lg drop-shadow-2xl w-[90%] h-[200px] bg-white text-2xl flex items-center justify-center"
+              >
+                <img
+                  src="assets/Kawthar.png"
+                  alt=""
+                  class="w-[25%] h-[80%] object-cover rounded-lg mr-4"
+                />
+                <div>
+                  <p class="">Name: <span>Kawthar Suleiman</span></p>
+                  <p>Relationship: <span>Cousin</span></p>
+                  <p>Phone No: <span>09032098698</span></p>
+                </div>
+              </div>
+              <div
+                class="rounded-lg drop-shadow-2xl w-[90%] h-[200px] bg-white text-2xl flex items-center justify-center"
+              >
+                <img
+                  src="assets/Grace.png"
+                  alt=""
+                  class="w-[25%] h-[80%] object-cover rounded-lg mr-4"
+                />
+                <div>
+                  <p class="">Name: <span>Grace Adie</span></p>
+                  <p>Relationship: <span>Sister</span></p>
+                  <p>Phone No: <span>08036238069</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="flex">
+        <div><img src="assets/login.png" alt="" class="h-screen"></div>
+        <div class="my-0 mx-auto flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-bold">Create account</h1><br>
+            <button class="p-4 border-2 w-[300px] h-[50px] rounded-[30px] flex justify-left items-center">
+                <img src="assets/google.png" alt="">
+                <p class="ml-[20%]">Register with Google</p>
+            </button><br>
+            <div>
+                <div class="flex items-center">
+                    <hr class="w-1/2">
+                    <p class="mx-2">or</p>
+                    <hr class="w-1/2">
+                </div>
+                <br>
+                <form action="" id="signup-form">
+                    <label for="" class="relative border">
+                        <img src="assets/useer.png" alt="" class="absolute top-[1px] left-[20px]">
+                        <input id="fullName" type="text" placeholder="Fullname"
+                            class="border-2 w-[300px] h-[50px] rounded-[30px] px-[20%]">
+                    </label>
+                    <br><br>
+                    <label for="" class="relative border">
+                        <img src="assets/sms.png" alt="" class="absolute top-[1px] left-[20px]">
+                        <input id="signup-email" type="text" placeholder="Email"
+                            class="border-2 w-[300px] h-[50px] rounded-[30px] px-[20%]">
+                    </label><br><br>
+                    <label for="" class="relative border">
+                        <img src="assets/lock.png" alt="" class="absolute top-[1px] left-[20px]">
+                        <input id="signup-password" type="password" placeholder="Password"
+                            class="border-2 w-[300px] h-[50px] rounded-[30px] px-[20%]">
+                    </label><br><br>
+                    <label for="" class="relative border">
+                        <img src="assets/lock.png" alt="" class="absolute top-[1px] left-[20px]">
+                        <input id="val-signup-password" type="password" placeholder="Password"
+                            class="border-2 w-[300px] h-[50px] rounded-[30px] px-[20%]">
+                    </label><br><br>
+                    <label for=""><input type="checkbox" name="" id=""> Remember Me</label>
+                    <a class="ml-10">Forgot password?</a>
+                    <br><br>
+
+                    <button type="button" class="border w-[300px] h-[50px] rounded-[30px] bg-[#0085FF] text-white font-bold" onclick="signUp()">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+
+</html>

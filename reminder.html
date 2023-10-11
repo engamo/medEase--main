@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="bg-[#0085ff] py-6">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="font-bold text-white text-4xl">
+          Med<span class="text-red-500">Ease</span>
+        </h1>
+        <div class="flex justify-between gap-4 items-center">
+          <img src="assets/Grace.png" alt="Grace" class="rounded-full w-14 h-14" />
+          <p class="text-xl text-white">Grace Adie</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex min-h-screen flex-row bg-gray-100 text-gray-800">
+      <aside
+        class="sidebar w-76 -translate-x-full transform bg-white p-4 transition-transform duration-150 ease-in md:translate-x-0 md:shadow-md"
+      >
+        <a
+          href="#"
+          class="flex gap-8 items-center mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="person"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              User Profile
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="create"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Medication
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="add-circle"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Refill Status
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="medkit"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Health Insights
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center mt-8 pl-8 hover:bg-blue-500 bg-[#0085ff] rounded-lg py-3"
+        >
+          <span
+            ><ion-icon
+              name="notifications"
+              class="text-center text-white text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-white font-semibold">
+              Reminders
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon name="time" class="text-center text-3xl"></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Adherence Status
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="alert"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Emergency Contact
+            </h3></span
+          ></a
+        >
+
+        <a
+          href="#"
+          class="flex gap-8 items-center rounded-lg mt-8 pl-8"
+        >
+          <span
+            ><ion-icon
+              name="settings"
+              class="text-center text-3xl"
+            ></ion-icon
+          ></span>
+          <span
+            ><h3 class="text-xl text-gray-800 font-semibold">
+              Settings
+            </h3></span
+          ></a
+        >
+        
+      </aside>
+
+
+      
+
+      <main
+        class="main -ml-48 flex flex-grow flex-col transition-all duration-150 ease-in md:ml-0"
+      >
+        <div
+          class="flex justify-center items-center h-full bg-[#F4F4F4] shadow-md"
+        >
+          
+          <div class="h-[90%] w-[90%]">
+            <div class="w-1/2 flex justify-between items-center">
+              <img src="asset/Arrow back.png" alt="">
+              <h1 class="text-2xl font-bold">Schedule Dose</h1>
+            </div>
+            <div class="w-full h-full p-4">
+              <p class="text-xl pb-2">Pills Name</p>
+              <div class="w-[70%] h-10 flex items-center px-4 rounded-md shadow-md bg-white">
+                <img src="asset/Pill.png" alt="" class="pr-5">
+                <p class="text-x font-bold">Probiotic</p>
+              </div>
+              <br>
+              <p class="text-xl pb-2">Amount</p>
+              <div class="w-[70%] h-10 flex gap-4">
+                <select name="" id="" class="w-1/2 px-4 shadow-md rounded-md">
+                  <option value="">Amount</option>
+                  <option value="">1 pill</option>
+                  <option value="">2 pills</option>
+                  <option value="">3 pills</option>
+                  <option value="">4 pills</option>
+                </select>
+                <select name="" id="" class="w-1/2 px-4 shadow-md rounded-md">
+                  <option value="">Capacity</option>
+                  <option value="">100mg</option>
+                  <option value="">200mg</option>
+                  <option value="">250mg</option>
+                  <option value="">500mg</option>
+                  <option value="">1000mg</option>
+                </select>
+              </div>
+              <br>
+              <p class="text-xl pb-2">Frequency</p>
+              <div class="w-[70%] h-10 flex justify-between items-center px-4 rounded-md shadow-md bg-white">
+                <img src="asset/Calendar today.png" alt="">
+                <p>Everyday</p>
+                <img src="asset/Expand Arrow.png" alt="">
+              </div>
+              <br>
+              <p class="text-xl pb-2">Reminder</p>
+              <div class="w-[70%] h-10 flex justify-between items-center px-4 rounded-md shadow-md bg-white">
+                <img src="asset/Notification.png" alt="">
+                <p>8:00 AM</p>
+                <img src="asset/Add box.png" alt="">
+              </div>
+              <br>
+              <div class="w-[70%] flex justify-between items-center">
+                <button class="w-32 h-10 bg-blue-500 text-white font-bold rounded-md mx-auto">Done</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
